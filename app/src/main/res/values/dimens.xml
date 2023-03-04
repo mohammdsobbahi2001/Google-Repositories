@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // margins and paddings
+    <dimen name="space_0dp">0dp</dimen>
+    <dimen name="space_1dp">1dp</dimen>
+    <dimen name="space_4dp">4dp</dimen>
+    <dimen name="space_8dp">8dp</dimen>
+    <dimen name="space_12dp">12dp</dimen>
+    <dimen name="space_16dp">16dp</dimen>
+    <dimen name="space_18dp">18dp</dimen>
+    <dimen name="space_20dp">20dp</dimen>
+
+    // width and height
+    <dimen name="width_0dp">0dp</dimen>
+    <dimen name="height_0dp">0dp</dimen>
+    <dimen name="width_24dp">24dp</dimen>
+    <dimen name="height_24dp">24dp</dimen>
+    <dimen name="width_32dp">32dp</dimen>
+    <dimen name="height_32dp">32dp</dimen>
+    <dimen name="width_56dp">56dp</dimen>
+    <dimen name="height_56dp">56dp</dimen>
+    <dimen name="width_80dp">80dp</dimen>
+    <dimen name="height_80dp">80dp</dimen>
+    <dimen name="width_160dp">160dp</dimen>
+    <dimen name="height_160dp">160dp</dimen>
+
+    // font
+    <dimen name="font_12sp">12sp</dimen>
+    <dimen name="font_14sp">14sp</dimen>
+    <dimen name="font_16sp">16sp</dimen>
+
+    // radius
+    <dimen name="radius_4dp">4dp</dimen>
+    <dimen name="radius_8dp">8dp</dimen>
+
+</resources>

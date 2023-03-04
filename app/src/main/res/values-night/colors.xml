@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // General colors
+    <color name="transparent">#00ffffff</color>
+    <color name="primaryColor">#000000</color>
+
+    <!-- Background colors -->
+    // black
+    <color name="background_black_000000">#ffffff</color>
+
+    // dark blue
+    <color name="background_dark_blue_121127">#ffffff</color>
+    <color name="background_dark_blue_201F37">#eeeeee</color>
+
+    // white
+    <color name="background_white_FFFFFF">#000000</color>
+    <color name="background_white_F9F9FB">#222222</color>
+    <color name="background_white_E5E5EB">#333333</color>
+
+    <!--  text colors -->
+    // black
+    <color name="text_black_000000">#ffffff</color>
+
+    // dark blue
+    <color name="text_dark_blue_121127">#ffffff</color>
+    <color name="text_dark_blue_201F37">#eeeeee</color>
+
+    // white
+    <color name="text_white_FFFFFF">#000000</color>
+    <color name="text_white_F9F9FB">#101010</color>
+    <color name="text_white_E5E5EB">#120101</color>
+
+    <!--  icon colors -->
+    // black
+    <color name="icon_black_000000">#ffffff</color>
+
+    // dark blue
+    <color name="icon_dark_blue_121127">#ffffff</color>
+    <color name="icon_dark_blue_201F37">#eeeeee</color>
+
+    // white
+    <color name="icon_white_FFFFFF">#000000</color>
+    <color name="icon_white_F9F9FB">#101010</color>
+    <color name="icon_white_E5E5EB">#120101</color>
+
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.sample.googlerepositories.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_repositoryListFragment"
+            app:destination="@id/repositoryListFragment"
+            app:enterAnim="@anim/enter_slide_right_to_left_fragment"
+            app:exitAnim="@anim/exit_slide_right_to_left_fragment"
+            app:popEnterAnim="@anim/enter_slide_left_to_right_fragment"
+            app:popExitAnim="@anim/exit_slide_left_to_right_fragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repositoryListFragment"
+        android:name="com.sample.googlerepositories.ui.repositorieslist.RepositoryListFragment"
+        android:label="RepositoryListFragment"
+        tools:layout="@layout/fragment_repositories_list">
+        <action
+            android:id="@+id/action_repositoryListFragment_to_repositoryDetailsFragment"
+            app:destination="@id/repositoryDetailsFragment"
+            app:enterAnim="@anim/enter_slide_right_to_left_fragment"
+            app:exitAnim="@anim/exit_slide_right_to_left_fragment"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/enter_slide_left_to_right_fragment"
+            app:popExitAnim="@anim/exit_slide_left_to_right_fragment"
+            app:popUpTo="@id/repositoryListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repositoryDetailsFragment"
+        android:name="com.sample.googlerepositories.ui.repositoriesdetails.RepositoryDetailsFragment"
+        android:label="RepositoryDetailsFragment"
+        tools:layout="@layout/fragment_repository_details">
+        <argument
+            android:name="repository"
+            app:argType="com.sample.googlerepositories.models.Repository" />
+    </fragment>
+
+</navigation>

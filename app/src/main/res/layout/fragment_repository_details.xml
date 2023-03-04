@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="repository"
+            type="com.sample.googlerepositories.models.Repository" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRepositoryItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:layout_marginTop="@dimen/space_8dp"
+            android:background="?actionBarItemBackground"
+            android:contentDescription="@string/back"
+            android:padding="@dimen/space_16dp"
+            android:src="@drawable/ic_back_arrow"
+            android:theme="@style/Theme.GoogleRepositories"
+            app:layout_constraintBottom_toBottomOf="@id/tvHeaderName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvHeaderName" />
+
+        <TextView
+            android:id="@+id/tvHeaderName"
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8dp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/space_4dp"
+            android:paddingTop="@dimen/space_18dp"
+            android:paddingBottom="@dimen/space_18dp"
+            android:text="@{repository.fullName}"
+            android:textColor="@color/text_dark_blue_121127"
+            android:textDirection="locale"
+            android:textSize="@dimen/font_16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/imgBack1"
+            app:layout_constraintStart_toEndOf="@+id/imgBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgBack1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_8dp"
+            android:clickable="false"
+            android:contentDescription="@string/back"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:padding="@dimen/space_16dp"
+            android:src="@drawable/ic_back_arrow"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tvHeaderName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvHeaderName" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_1dp"
+            android:layout_marginTop="@dimen/space_4dp"
+            android:background="@color/background_white_E5E5EB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeaderName" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAvatar"
+            android:layout_width="@dimen/width_80dp"
+            android:layout_height="@dimen/height_80dp"
+            android:layout_marginStart="@dimen/space_20dp"
+            android:layout_marginTop="@dimen/space_12dp"
+            app:cardCornerRadius="@dimen/radius_4dp"
+            app:cardElevation="@dimen/space_0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/repository_avatar"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:layout_marginTop="@dimen/space_8dp"
+            android:layout_marginEnd="@dimen/space_8dp"
+            android:padding="@dimen/space_4dp"
+            android:text="@{repository.fullName}"
+            android:textColor="@color/text_dark_blue_201F37"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintBottom_toBottomOf="@id/cardAvatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@id/cardAvatar" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tvCreationDate,tvStargazerCount"
+            app:layout_constraintStart_toEndOf="@id/tvStargazerCount" />
+
+        <TextView
+            android:id="@+id/tvCreationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_20dp"
+            android:layout_marginTop="@dimen/space_20dp"
+            android:padding="@dimen/space_4dp"
+            android:text="@string/creation_date"
+            android:textColor="@color/text_dark_blue_121127"
+            android:textSize="@dimen/font_14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardAvatar" />
+
+        <TextView
+            android:id="@+id/tvCreationDateValue"
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:layout_marginEnd="@dimen/space_8dp"
+            android:padding="@dimen/space_4dp"
+            android:text="@{repository.formatDate()}"
+            android:textColor="@color/text_dark_blue_201F37"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCreationDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/tvCreationDate" />
+
+        <TextView
+            android:id="@+id/tvStargazerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_20dp"
+            android:layout_marginTop="@dimen/space_8dp"
+            android:padding="@dimen/space_4dp"
+            android:text="@string/stargazer_count"
+            android:textColor="@color/text_dark_blue_121127"
+            android:textSize="@dimen/font_14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCreationDate" />
+
+        <TextView
+            android:id="@+id/tvStargazerCountValue"
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:layout_marginEnd="@dimen/space_8dp"
+            android:padding="@dimen/space_4dp"
+            android:text="@{repository.stargazersCount.toString()}"
+            android:textColor="@color/text_dark_blue_201F37"
+            android:textSize="@dimen/font_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvStargazerCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/tvStargazerCount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

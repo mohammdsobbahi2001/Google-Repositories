@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="repository"
+            type="com.sample.googlerepositories.models.Repository" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_white_FFFFFF"
+        android:foreground="@drawable/selector_8dp"
+        android:padding="@dimen/space_8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAvatarShimmer"
+            android:layout_width="@dimen/width_56dp"
+            android:layout_height="@dimen/height_56dp"
+            app:cardBackgroundColor="@color/background_white_E5E5EB"
+            app:cardCornerRadius="@dimen/radius_4dp"
+            app:cardElevation="@dimen/space_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/repository_avatar"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNameShimmer"
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:background="@drawable/round_e5e5eb_background_4dp"
+            android:padding="@dimen/space_4dp"
+            android:textSize="@dimen/font_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardAvatarShimmer"
+            app:layout_constraintTop_toTopOf="@+id/cardAvatarShimmer" />
+
+        <TextView
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:layout_marginTop="@dimen/space_4dp"
+            android:background="@drawable/round_e5e5eb_background_4dp"
+            android:padding="@dimen/space_4dp"
+            android:textSize="@dimen/font_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardAvatarShimmer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardAvatarShimmer"
+            app:layout_constraintTop_toBottomOf="@id/tvNameShimmer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

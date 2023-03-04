@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+
+    // Kotlin Kapt for dataBinding
+    id 'kotlin-kapt'
+
+    // Safe args for navigation to pass data between fragments safely
+    id "androidx.navigation.safeargs.kotlin"
+
+}
+
+android {
+    namespace 'com.sample.googlerepositories'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.sample.googlerepositories"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    // DataBinding & ViewBinding
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    // AndroidX Core KTX dependency
+    implementation "androidx.core:core-ktx:$project.androidKtxVersion"
+
+    // AndroidX AppCompat dependency
+    implementation "androidx.appcompat:appcompat:$project.androidXVersion"
+
+    // material io dependency
+    implementation "com.google.android.material:material:$project.materialVersion"
+
+    // androidx constraint layout dependency
+    implementation "androidx.constraintlayout:constraintlayout:$project.constraintLayoutVersion"
+
+    // ViewModel dependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$project.lifeCycleViewModelVersion"
+
+    // LiveData dependency
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$project.lifeCycleLiveDataVersion"
+
+    // Activity KTX dependency
+    implementation "androidx.activity:activity-ktx:$project.activityVersion"
+
+    // Fragment KTX dependency
+    implementation "androidx.fragment:fragment-ktx:$project.fragmentVersion"
+
+    // Navigation components dependency
+    implementation "androidx.navigation:navigation-fragment-ktx:$project.navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$project.navigationVersion"
+
+    // retrofit dependency
+    implementation "com.squareup.retrofit2:retrofit:$project.retrofitVersion"
+
+    // retrofit gson converter dependency
+    implementation "com.squareup.retrofit2:converter-gson:$project.retrofitGsonConverterVersion"
+
+    // Glide for image load using URL
+    implementation "com.github.bumptech.glide:glide:$project.glideVersion"
+
+    // shimmer effect used when images in site visit are loading
+    implementation "com.facebook.shimmer:shimmer:$project.shimmerVersion"
+
+}

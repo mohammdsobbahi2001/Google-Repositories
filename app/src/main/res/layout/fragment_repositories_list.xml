@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_white_FFFFFF"
+        tools:context=".ui.MainActivity">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchViewRepos"
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_12dp"
+            android:layout_marginTop="@dimen/space_20dp"
+            android:layout_marginEnd="@dimen/space_12dp"
+            android:background="@drawable/bordered_e5e5eb_8dp"
+            android:imeOptions="flagNoExtractUi"
+            android:textSize="@dimen/font_12sp"
+            android:theme="@style/SearchViewStyle"
+            app:defaultQueryHint="@string/search_repos"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryBackground="@color/transparent"
+            app:searchHintIcon="@null" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_0dp"
+            android:layout_marginTop="@dimen/space_8dp"
+            android:paddingStart="@dimen/space_8dp"
+            android:paddingEnd="@dimen/space_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchViewRepos"
+            app:shimmer_base_alpha="0.5"
+            app:shimmer_duration="1200"
+            app:shimmer_width_ratio="1.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+
+                <include layout="@layout/item_shimmer_placeholder" />
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGoogleRepository"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_0dp"
+            android:layout_marginTop="@dimen/space_8dp"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/space_8dp"
+            android:paddingEnd="@dimen/space_8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchViewRepos"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_repository" />
+
+        <TextView
+            android:id="@+id/tvNoRepository"
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8dp"
+            android:layout_marginTop="@dimen/space_20dp"
+            android:gravity="center"
+            android:padding="@dimen/space_4dp"
+            android:text="@string/no_repositories"
+            android:textColor="@color/text_dark_blue_201F37"
+            android:textSize="@dimen/font_14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchViewRepos" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

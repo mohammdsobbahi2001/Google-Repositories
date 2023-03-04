@@ -1,0 +1,24 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.GoogleRepositories" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/primaryColor</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/background_black_000000</item>
+        <item name="colorSecondaryVariant">@color/primaryColor</item>
+        <item name="colorOnSecondary">@color/primaryColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="SearchViewStyle" parent="Theme.GoogleRepositories">
+        <item name="android:textSize">@dimen/font_14sp</item>
+        <item name="android:textColor">@color/text_dark_blue_201F37</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+</resources>

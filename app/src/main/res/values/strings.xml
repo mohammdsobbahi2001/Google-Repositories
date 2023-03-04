@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Google Repositories</string>
+
+    // content description
+    <string name="google_repositories">Google Repositories</string>
+    <string name="back">Back</string>
+
+    <string name="repository_avatar">Repository Avatar</string>
+    <string name="no_repositories">No Repositories</string>
+    <string name="search_repos">Search Repositories</string>
+    <string name="creation_date">Creation Date:</string>
+    <string name="stargazer_count">Stargazers Count:</string>
+</resources>

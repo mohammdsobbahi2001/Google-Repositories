@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // General colors
+    <color name="transparent">#00000000</color>
+    <color name="primaryColor">#ffffff</color>
+
+    <!-- Background colors -->
+    // black
+    <color name="background_black_000000">#000000</color>
+
+    // dark blue
+    <color name="background_dark_blue_121127">#121127</color>
+    <color name="background_dark_blue_201F37">#201F37</color>
+
+    // white
+    <color name="background_white_FFFFFF">#FFFFFF</color>
+    <color name="background_white_F9F9FB">#F9F9FB</color>
+    <color name="background_white_E5E5EB">#E5E5EB</color>
+
+    <!--  text colors -->
+    // black
+    <color name="text_black_000000">#000000</color>
+
+    // dark blue
+    <color name="text_dark_blue_121127">#121127</color>
+    <color name="text_dark_blue_201F37">#201F37</color>
+
+    // white
+    <color name="text_white_FFFFFF">#FFFFFF</color>
+    <color name="text_white_F9F9FB">#F9F9FB</color>
+    <color name="text_white_E5E5EB">#E5E5EB</color>
+
+    <!--  icon colors -->
+    // black
+    <color name="icon_black_000000">#000000</color>
+
+    // dark blue
+    <color name="icon_dark_blue_121127">#121127</color>
+    <color name="icon_dark_blue_201F37">#201F37</color>
+
+    // white
+    <color name="icon_white_FFFFFF">#FFFFFF</color>
+    <color name="icon_white_F9F9FB">#F9F9FB</color>
+    <color name="icon_white_E5E5EB">#E5E5EB</color>
+
+</resources>

@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    dependencies {
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.5.3")
+    }
+}
+
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.4.1' apply false
+    id 'com.android.library' version '7.4.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+}
+
+ext {
+
+    // AndroidX Core KTX version
+    androidKtxVersion = '1.9.0'
+
+    // AndroidX AppCompat version
+    androidXVersion = '1.6.1'
+
+    // material io version
+    materialVersion = '1.8.0'
+
+    // androidx constraint layout version
+    constraintLayoutVersion = '2.1.4'
+
+    // androidx lifecycle view model version
+    lifeCycleViewModelVersion = '2.5.1'
+
+    // androidx lifecycle live data version
+    lifeCycleLiveDataVersion = '2.5.1'
+
+    // androidx activity version
+    activityVersion = '1.6.1'
+
+    // androidx fragment version
+    fragmentVersion = '1.5.5'
+
+    // Navigation components version
+    navigationVersion = "2.5.3"
+
+    // retrofit version
+    retrofitVersion = '2.9.0'
+
+    // retrofit gson converter version
+    retrofitGsonConverterVersion = '2.9.0'
+
+    // glide version
+    glideVersion = '4.14.2'
+
+    // shimmer effect version by facebook
+    shimmerVersion = '0.5.0'
+
+}
